@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $nav = array('каталог', 'акции', 'о компании', 'контакты');
+
+
+
+
+
+
+
+
+
+
+
+    return view('welcome', ['arr'=>$nav]);
 });
