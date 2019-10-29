@@ -18,6 +18,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: Gotham Pro;
   background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -51,6 +53,10 @@ li {
   cursor: pointer;
   background: none;
   border: 0;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 .container {
@@ -186,7 +192,7 @@ li {
     font-size: 15px;
     font-weight: bold;
     overflow: hidden;
-    max-width: 200px;
+    width: calc(100% - 22px*2);
     white-space: nowrap;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -468,7 +474,6 @@ li {
     position: relative;
     display: inline-block;
     max-width: 285px;
-    height: 1.714em*2;
     overflow: hidden;
   }
 
@@ -578,6 +583,7 @@ li {
 }
 
 .footer {
+  flex-shrink: 0;
   background-color: #fff;
   padding: 38px 0 0 0;
 

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,19 +9,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $nav = array('каталог', 'акции', 'о компании', 'контакты');
-
-
-
-
-
-
-
-
-
-
-
-    return view('welcome', ['arr'=>$nav]);
+$mock = json_decode(json_encode(config('mock')), FALSE);
+Route::get('/', function () use($mock) {
+    return view('welcome',[
+        'mock'=> $mock,
+    ]);
+});
+Route::get('/catalog', function () use($mock) {
+    return view('pages.catalog',[
+        'mock'=> $mock,
+    ]);
+});
+Route::get('/stocks', function () use($mock) {
+    return view('pages.stocks',[
+        'mock'=> $mock,
+    ]);
+});
+Route::get('/about-us', function () use($mock) {
+    return view('pages.about',[
+        'mock'=> $mock,
+    ]);
+});
+Route::get('/contacts', function () use($mock) {
+    return view('pages.contacts',[
+        'mock'=> $mock,
+    ]);
 });
