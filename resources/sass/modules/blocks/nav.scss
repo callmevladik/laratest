@@ -1,0 +1,25 @@
+.nav {
+    padding-top: 3px;
+
+    &__item {
+        display: inline-block;
+
+        @include sm {
+            &:not(:first-child) {
+                margin-left: 36px;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 10px;
+        color: $default-color;
+        text-transform: uppercase;
+
+        @include sm {
+            font-size: 14px;
+        }
+
+        font-family: Gotham Pro Bold;
+    }
+}

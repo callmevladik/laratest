@@ -1,0 +1,26 @@
+.footer {
+    flex-shrink: 0;
+    background-color: #fff;
+    padding: 38px 0 0 0;
+
+    @include md {
+        padding: 38px 120px 0;
+    }
+
+
+    &__title {
+        &--social {
+            @include sm {
+                margin-bottom: 20px;
+            }
+
+            font-family: Gotham Pro Medium;
+            color: #80868e;
+            margin-left: 10px;
+        }
+    }
+
+    &__copyright {
+        margin-top: 20px;
+    }
+}

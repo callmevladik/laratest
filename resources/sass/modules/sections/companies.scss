@@ -1,0 +1,13 @@
+.companies {
+    padding: rem(39px 0 80px);
+
+    @include rwd(1420) {
+        padding: rem(39px 0 120px);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

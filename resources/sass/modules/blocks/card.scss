@@ -1,0 +1,158 @@
+.card {
+    background-color: #fff;
+    box-shadow: 0px 5px 4.6px 0.4px rgba(23, 24, 25, 0.05);
+    transition: box-shadow 300ms ease;
+    height: 100%;
+
+    &:hover {
+        box-shadow: 0px 8px 12.75px 2.25px rgba(23, 24, 25, 0.1);
+    }
+
+    &__header {
+        height: auto;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .5), transparent);
+            z-index: 2;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+        max-height: 238px;
+        min-height: 238px;
+        width: 100%;
+    }
+
+    &__badge,
+    &__name {
+        text-transform: uppercase;
+        z-index: 3;
+    }
+
+    &__name {
+        position: absolute;
+        bottom: 12px;
+        left: 22px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        overflow: hidden;
+        max-width: 200px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        div {
+            margin-top: 5px;
+        }
+    }
+
+    &__badge {
+        font-size: 10px;
+        font-weight: bold;
+        color: #3c3c3c;
+        padding: 5px 10px;
+        background-color: #ffc600;
+        position: absolute;
+        top: 6px;
+        left: 22px;
+
+
+        div {
+            font-family: Gotham Pro Medium;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 80px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 100%;
+            border-right: 7px solid rgba(0, 0, 0, 0);
+            border-top: 7px solid #ffc600;
+            border-left: 0 solid rgba(0, 0, 0, 0);
+        }
+    }
+
+    &__info {
+        color: $default-color;
+        position: relative;
+        padding: 12px 6px 20px;
+
+        @include sm {
+            padding: 12px 25px 20px;
+        }
+    }
+
+    &__location {
+        font-size: 14px;
+        color: $default-color;
+        line-height: 1.714em;
+        padding-right: 35px;
+        position: relative;
+        display: inline-block;
+        max-width: 285px;
+        overflow: hidden;
+    }
+
+    &__label {
+        color: #80848d;
+        margin-left: 1px;
+        font-size: 12px;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        span {
+            margin-left: 5px;
+            font-family: Gotham Pro Bold;
+        }
+    }
+
+    &__price,
+    &__label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__btn {
+        cursor: pointer;
+
+        &--favorite {
+            top: 5px;
+            right: 16px;
+            position: absolute;
+            width: 30px;
+            height: 28px;
+            background-color: rgba(0, 0, 0, .25);
+            border-radius: 5px;
+            z-index: 3;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__row {
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}

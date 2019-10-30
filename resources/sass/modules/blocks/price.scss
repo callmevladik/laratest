@@ -1,0 +1,18 @@
+.price {
+    background-color: #fffbd7;
+    padding: 3px 16px 8px 2px;
+
+    &__text {
+        font-size: 18px;
+        color: #161617;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        span {
+            margin-left: 5px;
+            font-family: Gotham Pro Bold;
+        }
+    }
+}

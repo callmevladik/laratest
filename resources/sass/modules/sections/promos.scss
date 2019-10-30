@@ -1,0 +1,48 @@
+.promos {
+    position: relative;
+
+    @include rwd(1420) {
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            background-color: #fafafa;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-100%);
+            z-index: -1;
+        }
+    }
+
+    &__news {
+        background-color: #fafafa;
+        padding: rem(50px 10px 42px);
+        position: relative;
+
+        @include rwdd(320, 1419) {
+            width: 100%;
+        }
+
+        @include rwd(1420) {
+            padding: rem(50px 80px 42px 0px);
+        }
+    }
+
+    &__subscription {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        padding-left: 60px;
+
+        @include rwdd(320, 1419) {
+            padding: 0 20px;
+        }
+
+        @include xl {
+            background-color: #f1f1f1;
+        }
+    }
+}

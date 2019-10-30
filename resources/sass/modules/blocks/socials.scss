@@ -1,0 +1,19 @@
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    .instagram_icon {
+        height: 26px;
+    }
+
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}

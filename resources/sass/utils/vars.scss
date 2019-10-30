@@ -1,23 +1,33 @@
-// Font
+// fonts
 $mainFont                : 'Geometria', sans-serif;
 
-// Main color
+// colors
 $default-color           : #48494a;
+$successColor            : #82b74b;
+$errorColor              : #c83349;
+$warningColor            : #ff7b25;
+$infoColor               : #6b5b95;
 
-$screen-xs-min: 320px;
+// colors array
+$btnColors : (
+    success: $successColor,
+    error : $errorColor,
+    warning: $warningColor,
+    info : $infoColor
+);
 
-$screen-sm-min: 576px;
+// screen sizes
 
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
+$screen-xs-min           : 320px;
+$screen-sm-min           : 576px;
+$screen-md-min           : 768px;
+$screen-lg-min           : 992px;
+$screen-xl-min           : 1200px;
 
 //bootstrap grid-gutter-width reset
-$grid-gutter-width: 20px !default;
+
+$grid-gutter-width       : 20px !default;
+
+
+
 

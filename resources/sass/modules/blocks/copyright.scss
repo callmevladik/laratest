@@ -1,0 +1,23 @@
+.copyright {
+    &__img {
+        max-width: 35px;
+    }
+
+    &__img,
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: PFDinTextCondPro-Regular;
+    }
+
+    &__text {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #80868e;
+
+        div {
+            font-family: PFDinTextCondPro-Bold;
+            color: #000;
+        }
+    }
+}
